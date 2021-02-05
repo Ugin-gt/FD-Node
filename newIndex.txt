@@ -1,0 +1,3 @@
+old content:Another day of practice in Fresh Code
+
+New content:Appending New String
