@@ -18,3 +18,6 @@ fs.readFile('./index.txt', 'utf8').then((content) => {
   const dataToAppend = `Old content:${content}\nNew content:${str}`;
   fs.appendFile('./newIndex.txt', dataToAppend, 'utf8');
 });
+
+const lodash = require('lodash');
+console.log(lodash);
