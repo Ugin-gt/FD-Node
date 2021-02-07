@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Ugin-gt/FD-Node/issues"
   },
-  "homepage": "https://github.com/Ugin-gt/FD-Node#readme"
+  "homepage": "https://github.com/Ugin-gt/FD-Node#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
 }
