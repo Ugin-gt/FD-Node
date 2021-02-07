@@ -1,6 +1,6 @@
 'use strict'
 
-const myMath = require('./myMath.js')
+const myMath = require('../myMath.js')
 console.log(myMath);
 
 console.log("Hello node");
@@ -20,4 +20,4 @@ fs.readFile('./index.txt', 'utf8').then((content) => {
 });
 
 const lodash = require('lodash');
-console.log(lodash);
+
