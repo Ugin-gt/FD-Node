@@ -7,3 +7,5 @@ exports.sum = sum;
 exports.div = div;
 exports.mult = mult;
 exports.sub = sub;
+
+console.log(__filename);

@@ -1,8 +1,15 @@
 'use strict'
 
 const myMath = require('./myMath.js')
-const fs = require('fs').promises;
 console.log(myMath);
+
+console.log("Hello node");
+const res = myMath.sum(123, 123, 123);
+console.log('Sum is', res);
+
+console.log(__filename);
+
+const fs = require('fs').promises;
 
 fs.readFile('./index.txt', 'utf8').then((content) => {
   const str = 'Appending New String'
@@ -11,7 +18,3 @@ fs.readFile('./index.txt', 'utf8').then((content) => {
   const dataToAppend = `Old content:${content}\nNew content:${str}`;
   fs.appendFile('./newIndex.txt', dataToAppend, 'utf8');
 });
-
-// console.log("Hello node");
-// const res = sum(123, 123, 123);
-// console.log('Sum is', res);
