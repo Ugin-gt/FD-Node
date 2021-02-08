@@ -38,8 +38,26 @@ buttonClick.onclick = function () {
     if (clicks === 1) {
       alert('Single click');
     }
-    clicks = 0;}, 400);
+    clicks = 0;
+  }, 400);
 }
+
+// Обработчик элемента списка для делегирования события
+//  по добавлению ! знака в список ul по target 
+
+const listElement = document.querySelector('.listLor');
+
+listElement.addEventListener('click', function (e) {
+  const { target } = e;
+  if (target.parentNode === listElement
+    && target.tagName === 'LI') {
+    target.innerHTML += '!';
+  }
+});
+
+
+
+
 
 // const buttonAdd = document.querySelector('.forClick')
 // const squareContainer = document.querySelector('.addSquare')

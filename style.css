@@ -2,6 +2,7 @@
 body {
   flex-direction: column;
   text-align: center;
+  
 }
 
 .mainContainer {
@@ -51,6 +52,7 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
+  margin: 20px;
 }
 
 .addSquare {
