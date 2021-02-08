@@ -43,7 +43,8 @@ body {
 }
 
 .button,
-.addSquareButton {
+.addSquareButton,
+.textContainer {
   background-color: #4caf50; /* Green */
   border: none;
   color: white;

@@ -62,7 +62,7 @@ listElement.addEventListener('click', function (e) {
 
 const addSquareButton = document.querySelector('.addSquareButton')
 const squareContainer = document.querySelector('.squareContainer')
-// console.log(buttonAdd);
+
 addSquareButton.addEventListener('click', clickHandler);
 squareContainer.addEventListener('click', squareClickHandler)
 
@@ -86,7 +86,22 @@ function createSquare() {
 };
 
 
-// const textContainer = document.querySelector('.textContainer');
-// const listContainer = document.querySelector('.listContainer');
+// При наведении на элементы списка выводить в текстовом блоке
+// текст этих елементов;
+// При наведении на любой другой элемент разметки - выводить
+// название тэга этого элемента.
 
-// // document.addEventListener('mouseover')
+
+const textContainer = document.querySelector('.textContainer');
+const listContainer = document.querySelector('.listContainer');
+
+document.addEventListener('mouseover', (event) => {
+  const { target: elem } = event;
+  const liElem = elem.closest('li');
+  if (liElem) {
+    textContainer.innerText = liElem.innerText;
+    return;
+  }
+  textContainer.innerText = elem.tagName;
+
+});
