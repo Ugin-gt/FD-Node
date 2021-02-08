@@ -1,0 +1,49 @@
+@import url('/reset.css');
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mainContainer {
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+#square1, #square2, #square3  {
+  height: 200px;
+  width: 200px;
+  background: rgb(62, 151, 253);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+#square2 {
+  background: orange;
+  width: 140px;
+  height: 140px;
+}
+
+#square3 {
+  background-color: rgb(48, 248, 8);
+  width: 80px;
+  height: 80px;
+}
+
+.addSquare {
+  width: 200px;
+  height: 200px;
+
+  justify-content: center;
+  margin-top: 50px;
+}
