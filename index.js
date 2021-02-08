@@ -56,33 +56,34 @@ listElement.addEventListener('click', function (e) {
 });
 
 
+// Генерирование события по кнопке - при клике создается квадрат
+// рандомного цвета с выводом свойства backdroundcolor в консоль
 
 
-
-// const buttonAdd = document.querySelector('.forClick')
-// const squareContainer = document.querySelector('.addSquare')
-// // console.log(buttonAdd);
-// buttonAdd.addEventListener('click', clickHandler);
-// squareContainer.addEventListener('click', squareClickHandler)
-
-
-// function squareClickHandler(e) {
-//   const { target } = e;
-//   if (target.parentNode === squareContainer)
-//     console.log(target.style.backgroundColor);
-// };
-
-// function clickHandler() {
-//   squareContainer.appendChild(createSquare());
-// }
+const addSquareButton = document.querySelector('.addSquareButton')
+const squareContainer = document.querySelector('.squareContainer')
+// console.log(buttonAdd);
+addSquareButton.addEventListener('click', clickHandler);
+squareContainer.addEventListener('click', squareClickHandler)
 
 
-// function createSquare() {
-//   const randColor = '#' + ('00' + Math.floor(Math.random() * 16777215).toString(16).substr(-6));
-//   const square = document.createElement('div');
-//   square.style.backgroundColor = randColor;
-//   return square;
-// };
+function squareClickHandler(e) {
+  const { target } = e;
+  if (target.parentNode === squareContainer)
+    console.log(target.style.backgroundColor);
+};
+
+function clickHandler() {
+  squareContainer.appendChild(createSquare());
+}
+
+
+function createSquare() {
+  const randColor = '#' + ('00' + Math.floor(Math.random(100) * 16777215).toString(16).substr(-6));
+  const square = document.createElement('div');
+  square.style.backgroundColor = randColor;
+  return square;
+};
 
 
 // const textContainer = document.querySelector('.textContainer');
