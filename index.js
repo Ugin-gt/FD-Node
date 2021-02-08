@@ -7,11 +7,11 @@ const square3 = document.querySelector('#square3');
 square1.addEventListener('click', function (e) {
   clickHandlerSquare(e);
   alert(1);
-},true);
+}, true);
 square2.addEventListener('click', function (e) {
   clickHandlerSquare(e);
   alert(2);
-},true);
+}, true);
 square3.addEventListener('click', function (e) {
   clickHandlerSquare(e);
   alert(3);
@@ -22,6 +22,24 @@ function clickHandlerSquare(e) {
 }
 
 
+//Обработчик кнопки по одинарному и двойному клику с выводом Alert
+
+const buttonClick = document.querySelector('button');
+
+let clicks = 0;
+buttonClick.onclick = function () {
+  clicks++;
+  if (clicks >= 2) {
+    alert('Double click');
+    clicks = 0;
+    return;
+  }
+  setTimeout(() => {
+    if (clicks === 1) {
+      alert('Single click');
+    }
+    clicks = 0;}, 400);
+}
 
 // const buttonAdd = document.querySelector('.forClick')
 // const squareContainer = document.querySelector('.addSquare')
